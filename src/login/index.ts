@@ -23,6 +23,13 @@ export function loginHandler(err, res, body) {
         if (responseBody.includes('포탈 사용자 정보가 존재하지 않습니다!')) {
             console.error("LOGIN FAILED!");
             process.exit(1);
+        } else if (responseBody.includes('수강신청 기간이 아닙니다')) {
+            console.error("NOT YET!");
+            const regex = /(현재 서버시간) : (([0-9]{4})-([0-9]{2})-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}))/;
+            const response = regex.exec(responseBody);
+            var serverTime = new Date(response[2]);
+            console.log(serverTime);
+            process.exit(2);
         }
     }
 }
