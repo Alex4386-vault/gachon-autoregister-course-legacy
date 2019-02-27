@@ -2,7 +2,7 @@
 const possible =
 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@$%~';
 
-export function createRandomness(a) {
+export function createRandomness(a):string {
 let text = '';
 
 for (let i = a; i--;) {

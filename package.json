@@ -4,8 +4,10 @@
   "description": "가천대학교 자동 수강신청",
   "main": "index.js",
   "dependencies": {
+    "@types/node": "^11.9.5",
     "iconv-lite": "^0.4.24",
     "request": "^2.88.0",
+    "typescript": "^3.3.3333",
     "utils": "^0.3.1"
   },
   "devDependencies": {},
