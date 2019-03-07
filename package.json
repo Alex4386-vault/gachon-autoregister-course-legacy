@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@types/node": "^11.9.5",
+    "cookie-parser": "^1.4.4",
     "iconv-lite": "^0.4.24",
     "request": "^2.88.0",
     "typescript": "^3.3.3333",

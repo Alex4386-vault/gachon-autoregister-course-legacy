@@ -1,6 +1,11 @@
 import util from "util";
 import persistents from "../gachon/persistent";
 import { encodeMe, convertUTF8 } from "../utils";
+import { Z_STREAM_END } from "zlib";
+import { register } from "../";
+
+export let CookieString = "";
+export let CookieVal = "";
 
 export class loginOptions {
     public static encoding: string = null;
@@ -18,7 +23,7 @@ export function loginHandler(err, res, body) {
     }
     if (res) {
         var responseBody = convertUTF8(body);
-        console.log(responseBody);
+        //console.log(responseBody);
 
         if (responseBody.includes('포탈 사용자 정보가 존재하지 않습니다!')) {
             console.error("LOGIN FAILED!");
@@ -28,8 +33,27 @@ export function loginHandler(err, res, body) {
             const regex = /(현재 서버시간) : (([0-9]{4})-([0-9]{2})-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}))/;
             const response = regex.exec(responseBody);
             var serverTime = new Date(response[2]);
-            console.log(serverTime);
-            process.exit(2);
+            var timeDiff = new Date().getTime() - serverTime.getTime();
+            console.log("Time Diff: "+timeDiff+'ms');
+            // ----
+            CookieString = res.headers['set-cookie'][0];
+            console.log(CookieString);
+            const cookieRegex = /^JSESSIONID=(.*?);/;
+            const parsedCookie = cookieRegex.exec(CookieString);
+            console.log(parsedCookie[1]);
+            CookieVal = parsedCookie[1];
+            register(11366003);
+        } else {
+            console.log("SUCCESS?");
+            // ----
+            CookieString = res.headers['set-cookie'][0];
+            console.log(CookieString);
+            const cookieRegex = /^JSESSIONID=(.*?);/;
+            const parsedCookie = cookieRegex.exec(CookieString);
+            console.log(parsedCookie[1]);
+            CookieVal = parsedCookie[1];
+            // ----
+            register(11366003);
         }
     }
 }
