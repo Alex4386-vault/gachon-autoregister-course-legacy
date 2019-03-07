@@ -1,13 +1,18 @@
+import req from "request";
 import util from "util";
 import persistents from "../gachon/persistent";
 import { encodeMe, convertUTF8 } from "../utils";
-import { Z_STREAM_END } from "zlib";
-import { register } from "../";
+import { register } from "../register";
+import { registerThese } from "..";
 
 export let CookieString = "";
 export let CookieVal = "";
 
-export class loginOptions {
+export async function login() {
+    req.post(loginOptions, loginHandler)
+}
+
+class loginOptions {
     public static encoding: string = null;
     public static url: string = util.format("http://"+persistents.gachonUniv.apply+"/servlets/core/login?attribute=login");
     public static headers = {
@@ -17,7 +22,7 @@ export class loginOptions {
     public static body = "id="+encodeMe(persistents.credentials.id)+"&password="+encodeMe(persistents.credentials.password)
 }
 
-export function loginHandler(err, res, body) {
+function loginHandler(err, res, body) {
     if (err) {
         console.error(err);
     }
@@ -42,9 +47,9 @@ export function loginHandler(err, res, body) {
             const parsedCookie = cookieRegex.exec(CookieString);
             console.log(parsedCookie[1]);
             CookieVal = parsedCookie[1];
-            register(11366003);
+            setTimeout(login, 1000);
         } else {
-            console.log("SUCCESS?");
+            console.log("LOGIN SUCCESS!!!!");
             // ----
             CookieString = res.headers['set-cookie'][0];
             console.log(CookieString);
@@ -52,8 +57,10 @@ export function loginHandler(err, res, body) {
             const parsedCookie = cookieRegex.exec(CookieString);
             console.log(parsedCookie[1]);
             CookieVal = parsedCookie[1];
-            // ----
-            register(11366003);
+            registerThese.forEach((registrar: number) => {
+                console.log("Registering Subject "+registrar);
+                register(registrar);
+            });
         }
     }
 }

@@ -1,5 +1,4 @@
 /* Initial Setup */
-
 export default {
     /**
      * Persistent data for gachonUniversity itself
@@ -10,11 +9,12 @@ export default {
          */
         apply: "203.249.127.98:9090"
     },
+
     /**
      * Credentials for logging in portal.
      */
     credentials: {
-        id: "yourID",
-        password: "password"
+        id: "userID",
+        password: "userPW"
     }
 }
