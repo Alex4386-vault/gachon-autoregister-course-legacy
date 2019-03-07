@@ -51,4 +51,4 @@ je_gbn = "N"
 그래서 API GET!!
 
 ## 라이선스
-[HRPL](https://github..com/Alex4386/HRPL), 불만입니까 휴먼? MIT License 인데 좀 자율성을 보완한 거예요.
+[HRPL](https://github.com/Alex4386/HRPL), 불만입니까 휴먼? MIT License 인데 좀 자율성을 보완한 거예요.
