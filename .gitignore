@@ -62,3 +62,7 @@ typings/
 
 # TypeScript Build Output
 dist/
+
+# Prevent Credentials be committed
+src/gachon/persistent.ts
+bfg-1.13.0.jar
