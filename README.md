@@ -55,7 +55,7 @@ je_gbn = "N"
   
 **P.S.** 사이버 캠퍼스도 SSL 안 쓰길래 해달라고 Q&A를 넣었는데, 답장이 뭐라고 왔냐면...  
 ![image](https://user-images.githubusercontent.com/27724108/60835384-ec041880-a1fd-11e9-91f8-75e680ef4c49.png)  
-... ~~(무들이 https 미 지원이라니 어디서 뻥을 치고 계시죠? 심지어 마이그레이션 툴까지 있던데?)~~  
+... ~~(무들이 https 미 지원이라니 어디서 뻥을 치고 계시죠? 심지어 마이그레이션 툴까지 있던데? 그리고 https가 더 느리다는건 [대체 언제적 이야깁니까](http://www.httpvshttps.com/))~~  
 
 ## 라이선스
 [HRPL](https://github.com/Alex4386/HRPL), 불만입니까 휴먼? MIT License 인데 좀 자율성을 보완한 거예요.
