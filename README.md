@@ -51,7 +51,11 @@ je_gbn = "N"
 
 ## 개인적으로 바라는 내용
 ![image](https://user-images.githubusercontent.com/27724108/54046689-73258d80-4218-11e9-84b4-c9e74f97eedc.png)  
-~~아는 사람은 다 아는 [인캠](https://www.google.co.kr/search?q=gil+ya+lee) [드](https://user-images.githubusercontent.com/27724108/54046871-edeea880-4218-11e9-8d68-0f3eb142f763.png)[립](https://user-images.githubusercontent.com/27724108/54046929-14144880-4219-11e9-93c9-c8ae57c6c937.png)이예요~~ ~~ㅋ~~  
+~~아는 사람은 다 아는 [인캠](https://www.google.co.kr/search?q=gil+ya+lee) [드](https://user-images.githubusercontent.com/27724108/54046871-edeea880-4218-11e9-8d68-0f3eb142f763.png)[립](https://user-images.githubusercontent.com/27724108/54046929-14144880-4219-11e9-93c9-c8ae57c6c937.png)이예요~~ ~~ㅋ~~    
+  
+**P.S.** 사이버 캠퍼스도 SSL 안 쓰길래 해달라고 Q&A를 넣었는데, 답장이 뭐라고 왔냐면...  
+![image](https://user-images.githubusercontent.com/27724108/60835384-ec041880-a1fd-11e9-91f8-75e680ef4c49.png)  
+... ~~(무들이 https 미 지원이라니 어디서 뻥을 치고 계시죠? 심지어 마이그레이션 툴까지 있던데?)~~  
 
 ## 라이선스
 [HRPL](https://github.com/Alex4386/HRPL), 불만입니까 휴먼? MIT License 인데 좀 자율성을 보완한 거예요.
