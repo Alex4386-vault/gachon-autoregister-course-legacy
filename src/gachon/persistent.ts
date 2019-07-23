@@ -7,14 +7,14 @@ export default {
         /**
          * host address of the gachonUniversity registration server
          */
-        apply: "203.249.127.98:9090"
+        apply: "sg.gachon.ac.kr"
     },
 
     /**
      * Credentials for logging in portal.
      */
     credentials: {
-        id: "userID",
-        password: "userPW"
+        id: "",
+        password: ""
     }
 }

@@ -3,15 +3,15 @@
   "version": "0.0.1",
   "description": "가천대학교 자동 수강신청",
   "main": "index.js",
-  "dependencies": {
+  "devDependencies": {
     "@types/node": "^11.9.5",
+  },
+  "dependencies": {
     "cookie-parser": "^1.4.4",
-    "iconv-lite": "^0.4.24",
     "request": "^2.88.0",
     "typescript": "^3.3.3333",
     "utils": "^0.3.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node dist/"
